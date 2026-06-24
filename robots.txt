@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://roots-of-hope-wellness.maguirepecci.workers.dev/sitemap.xml
