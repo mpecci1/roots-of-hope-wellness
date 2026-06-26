@@ -1,0 +1,11 @@
+{
+  // Cloudflare Workers static-assets config for the Git-connected deploy.
+  // Worker name matches the workers.dev subdomain (roots-of-hope-wellness.maguirepecci.workers.dev).
+  "name": "roots-of-hope-wellness",
+  "compatibility_date": "2024-12-30",
+  "assets": {
+    "directory": "./",
+    // Serve the branded /404.html (with a 404 status) for any unmatched route.
+    "not_found_handling": "404-page"
+  }
+}
