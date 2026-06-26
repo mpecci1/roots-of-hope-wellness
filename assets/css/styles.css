@@ -200,8 +200,8 @@ h3 { font-size: clamp(1.35rem, 1.15rem + .9vw, 1.7rem); }
 
 /* arch of light signature */
 .arch-stage { position: relative; display: grid; place-items: center; }
-.arch-glow { position: absolute; inset: -8% -6% auto 50%; transform: translateX(-50%); width: 116%; aspect-ratio: 1; border-radius: 50%;
-  background: radial-gradient(circle at 50% 42%, var(--c-gold-soft) 0%, rgba(235,203,134,.35) 28%, rgba(247,242,233,0) 62%); z-index: 0; }
+.arch-glow { position: absolute; inset: -13% -9% auto 50%; transform: translateX(-50%); width: 126%; aspect-ratio: 1; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle at 50% 42%, rgba(233,199,126,.92) 0%, rgba(215,162,75,.52) 19%, rgba(235,203,134,.22) 40%, rgba(247,242,233,0) 66%); z-index: 0; }
 .arch {
   position: relative; z-index: 1; width: min(420px, 78vw); aspect-ratio: 3 / 4.2;
   border-radius: 999px 999px 26px 26px;
@@ -455,4 +455,20 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--c
   * { scroll-behavior: auto !important; }
   .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
   .btn, .card, .step, .post-card { transition: none !important; }
+  .arch { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .arch-glow { animation: none !important; opacity: 1 !important; transform: translateX(-50%) !important; }
 }
+
+/* ============ craft upgrades (audit pass) ============ */
+:root { --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.3'/%3E%3C/svg%3E"); }
+
+/* subtle film grain on dark sections (static = reduced-motion-safe) */
+.bg-sage { background-image: var(--grain); }
+.site-footer { background-image: var(--grain); }
+.bg-photo::after { background-image: var(--grain), linear-gradient(180deg, rgba(31,52,40,.82), rgba(26,40,32,.9)); }
+
+/* orchestrated hero entrance */
+@keyframes archRise { from { opacity: 0; transform: scale(.93) translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes glowBloom { from { opacity: 0; transform: translateX(-50%) scale(.5); } to { opacity: 1; transform: translateX(-50%) scale(1); } }
+.arch-stage.in .arch { animation: archRise .9s var(--ease) both; }
+.arch-stage.in .arch-glow { animation: glowBloom 1.6s var(--ease) .1s both; }
