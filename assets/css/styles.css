@@ -473,3 +473,64 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--c
 @keyframes glowBloom { from { opacity: 0; transform: translateX(-50%) scale(.5); } to { opacity: 1; transform: translateX(-50%) scale(1); } }
 .arch-stage.in .arch { animation: archRise .9s var(--ease) both; }
 .arch-stage.in .arch-glow { animation: glowBloom 1.6s var(--ease) .1s both; }
+
+/* =================================================================
+   EDITORIAL ELEVATION LAYER — "elevated light" pass
+   More confident display type · ghost watermark words · gold-light
+   auras · botanical ornament · richer motion. Reduced-motion safe.
+   ================================================================= */
+
+/* --- bolder, more confident display scale --- */
+.h-display { font-size: clamp(2.9rem, 1.6rem + 5.7vw, 6rem); line-height: .93; letter-spacing: -.032em; }
+h2 { font-size: clamp(2.05rem, 1.4rem + 2.9vw, 3.55rem); letter-spacing: -.022em; }
+.lede { font-size: clamp(1.12rem, 1rem + .6vw, 1.42rem); }
+.hero-copy { max-width: 36ch; }
+
+/* --- section head + ghost watermark word --- */
+.section-head { position: relative; isolation: isolate; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+.section-head > * { position: relative; z-index: 1; }
+.ghost-word {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -54%);
+  font-family: var(--font-display); font-style: italic; font-weight: 400;
+  font-size: clamp(6rem, 15vw, 14rem); line-height: 1; letter-spacing: -.04em;
+  white-space: nowrap; color: var(--c-sage); opacity: .06; z-index: 0;
+  pointer-events: none; user-select: none;
+}
+.section-head.left .ghost-word { left: 0; transform: translate(-6%, -50%); }
+.bg-sage .ghost-word, .bg-photo .ghost-word { color: var(--c-gold-soft); opacity: .10; }
+
+/* --- gold-light aura behind a focal block --- */
+.aura { position: relative; isolation: isolate; }
+.aura::before {
+  content: ""; position: absolute; z-index: 0; left: 50%; top: 40%;
+  transform: translate(-50%, -50%); width: 74%; max-width: 720px; aspect-ratio: 1;
+  background: radial-gradient(circle, rgba(226,193,115,.26), rgba(226,193,115,0) 66%);
+  pointer-events: none;
+}
+.aura > * { position: relative; z-index: 1; }
+
+/* --- botanical ornament divider --- */
+.ornament { display: grid; place-items: center; padding-block: clamp(.5rem, 2vw, 1.6rem); }
+.ornament svg { width: clamp(150px, 26vw, 280px); height: auto; color: var(--c-gold); opacity: .85; }
+.bg-sage .ornament svg, .bg-photo .ornament svg { color: var(--c-gold-soft); }
+
+/* --- editorial drop cap (article lead paragraphs) --- */
+.dropcap::first-letter {
+  float: left; font-family: var(--font-display); font-weight: 400; font-size: 3.5em;
+  line-height: .72; padding: .05em .14em 0 0; color: var(--c-sage);
+}
+
+/* --- richer pillar / icon motion --- */
+.pillar { transition: transform .5s var(--ease); }
+.pillar:hover { transform: translateY(-5px); }
+.pillar .ic { transition: transform .5s var(--ease); }
+.pillar:hover .ic { transform: scale(1.09) rotate(-3deg); }
+.concern svg, .card .ic { transition: transform .5s var(--ease); }
+.card:hover .ic { transform: scale(1.08) rotate(-3deg); }
+
+/* --- elevated eyebrow presence --- */
+.eyebrow { font-size: .74rem; letter-spacing: .24em; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pillar, .pillar .ic, .card .ic, .concern svg { transition: none !important; transform: none !important; }
+}
