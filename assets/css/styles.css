@@ -517,6 +517,21 @@ h2 { font-size: clamp(2.05rem, 1.4rem + 2.9vw, 3.55rem); letter-spacing: -.022em
 /* --- real photos in blog thumbnails --- */
 .post-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
+/* --- ongoing membership band (recurring subscription) --- */
+.membership-band {
+  display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.6rem, 4vw, 3.2rem);
+  align-items: center; background: var(--c-sage-tint);
+  border: 1px solid var(--c-line-2); border-radius: var(--radius-lg);
+  padding: clamp(1.8rem, 4vw, 2.8rem);
+}
+.membership-band h3 { font-size: clamp(1.6rem, 1.3rem + 1vw, 2.1rem); }
+.membership-band .mb-note {
+  display: inline-block; font-weight: 700; font-size: .72rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--c-sage-deep);
+  background: rgba(255,255,255,.55); padding: .4em .85em; border-radius: 100px;
+}
+@media (max-width: 720px) { .membership-band { grid-template-columns: 1fr; } }
+
 /* --- editorial drop cap (article lead paragraphs) --- */
 .dropcap::first-letter {
   float: left; font-family: var(--font-display); font-weight: 400; font-size: 3.5em;
