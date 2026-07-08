@@ -275,6 +275,7 @@ h3 { font-size: clamp(1.35rem, 1.15rem + .9vw, 1.7rem); }
 .tier.featured { background: var(--c-sage-deep); color: #F2EEE2; border-color: var(--c-sage-deep); transform: scale(1.015); }
 .tier.featured h3, .tier.featured .price b { color: #FBF8F1; }
 .tier.featured .muted { color: #D2D6C2; }
+.tier.featured .price .per { color: #C9CEBB; }
 .tier.featured .tier-feat li { color: #E6E8D8; }
 .tier-tag { align-self: flex-start; font-size: .68rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--c-clay); background: var(--c-sage-tint); padding: .35em .8em; border-radius: 100px; margin-bottom: 1rem; }
 .tier.featured .tier-tag { color: var(--c-sage-deep); background: var(--c-gold-soft); }
