@@ -552,3 +552,61 @@ h2 { font-size: clamp(2.05rem, 1.4rem + 2.9vw, 3.55rem); letter-spacing: -.022em
 @media (prefers-reduced-motion: reduce) {
   .pillar, .pillar .ic, .card .ic, .concern svg { transition: none !important; transform: none !important; }
 }
+
+/* =================================================================
+   FILLABLE INTAKE FORM — "How Are You Feeling?" check-in
+   ================================================================= */
+.intake { max-width: 920px; margin-inline: auto; }
+.intake fieldset { border: 1px solid var(--c-line); border-radius: var(--radius-lg); background: var(--c-bone-2); padding: clamp(1.4rem, 3vw, 2.2rem); margin-bottom: 1.4rem; }
+.intake legend { display: flex; align-items: center; gap: .7rem; padding: 0; margin-bottom: .4rem; }
+.intake legend .n { display: grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--c-sage-deep); color: #F7F2E9; font-family: var(--font-body); font-weight: 700; font-size: .85rem; flex: none; }
+.intake legend .t { font-family: var(--font-body); font-weight: 700; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--c-clay); }
+.intake .sub { color: var(--c-soil-soft); font-size: .92rem; margin: -.1rem 0 .4rem; }
+.q-label { font-weight: 700; display: block; margin: 1.1rem 0 .5rem; font-size: .98rem; }
+.q-label:first-of-type { margin-top: .4rem; }
+.intake textarea { min-height: 3.2rem; resize: vertical; }
+.intake .lines input { margin-bottom: .6rem; }
+
+/* checkbox grid */
+.checkgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .35rem 1.4rem; }
+@media (max-width: 720px) { .checkgrid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 440px) { .checkgrid { grid-template-columns: 1fr; } }
+.check { display: flex; align-items: center; gap: .65rem; padding: .4rem 0; cursor: pointer; font-size: .95rem; }
+.check input { position: absolute; opacity: 0; width: 0; height: 0; }
+.check .box { width: 21px; height: 21px; border: 1.5px solid var(--c-line-2); border-radius: 6px; flex: none; display: grid; place-items: center; background: #fff; transition: background .18s, border-color .18s; }
+.check .box svg { width: 13px; height: 13px; color: #fff; opacity: 0; transition: opacity .15s; }
+.check input:checked + .box { background: var(--c-sage); border-color: var(--c-sage); }
+.check input:checked + .box svg { opacity: 1; }
+.check input:focus-visible + .box { outline: 2.5px solid var(--c-clay); outline-offset: 2px; }
+.check .other-in { flex: 1; min-width: 6rem; padding: .3em .5em; }
+
+/* rating scales */
+.scale { margin: 1rem 0 1.2rem; }
+.scale .sl { font-weight: 700; font-size: .96rem; margin-bottom: .45rem; display: block; }
+.scale-opts { display: flex; flex-wrap: wrap; gap: .35rem; }
+.rate input { position: absolute; opacity: 0; width: 0; height: 0; }
+.rate .p { display: grid; place-items: center; min-width: 2rem; height: 2rem; padding: 0 .15rem; border: 1.5px solid var(--c-line-2); border-radius: 8px; font-weight: 700; font-size: .82rem; cursor: pointer; background: #fff; transition: background .15s, color .15s, border-color .15s; }
+.rate input:checked + .p { background: var(--c-sage-deep); color: #F7F2E9; border-color: var(--c-sage-deep); }
+.rate input:focus-visible + .p { outline: 2.5px solid var(--c-clay); outline-offset: 2px; }
+.scale .ends { display: flex; justify-content: space-between; font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--c-soil-soft); margin-top: .35rem; max-width: 24rem; }
+
+/* lifestyle grid */
+.life-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.3rem 2.4rem; }
+@media (max-width: 720px) { .life-grid { grid-template-columns: 1fr; } }
+.life-item .lh { display: flex; align-items: center; gap: .6rem; margin-bottom: .5rem; }
+.life-item .lh svg { width: 24px; height: 24px; color: var(--c-sage); flex: none; }
+.life-item .lh b { font-size: .98rem; }
+.life-item .lh span { color: var(--c-soil-soft); font-size: .84rem; }
+
+.intake-actions { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: center; margin-top: 2rem; }
+
+/* print */
+@media print {
+  .site-header, .site-footer, .mobile-cta, .skip-link, .intake-actions, .page-hero .glow, .ghost-word, .aura::before { display: none !important; }
+  body { background: #fff !important; padding: 0 !important; color: #000; }
+  .section { padding-block: 0 !important; }
+  .intake fieldset { break-inside: avoid; border: 1px solid #999; background: #fff; }
+  .intake legend .n { background: #333; }
+  .rate .p, .check .box, .intake input, .intake textarea { border-color: #999 !important; }
+  .rate input:checked + .p { background: #333 !important; color: #fff !important; }
+}

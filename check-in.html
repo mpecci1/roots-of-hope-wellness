@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Are You Feeling? — A Check-in — Roots of Hope &amp; Wellness</title>
+<meta name="description" content="A gentle wellness check-in from Roots of Hope &amp; Wellness. Reflect on how you feel — body, mind and spirit — and bring it to your visit with Elyse.">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#38472D">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Roots of Hope &amp; Wellness">
+<meta property="og:title" content="How Are You Feeling? — A Wellness Check-in">
+<meta property="og:description" content="Your body has wisdom. Together, let’s find the root — a gentle check-in from Roots of Hope &amp; Wellness.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://roots-of-hope-wellness.maguirepecci.workers.dev/check-in">
+<meta property="og:url" content="https://roots-of-hope-wellness.maguirepecci.workers.dev/check-in">
+<meta property="og:image" content="https://roots-of-hope-wellness.maguirepecci.workers.dev/assets/img/og-image.jpg">
+<meta name="twitter:image" content="https://roots-of-hope-wellness.maguirepecci.workers.dev/assets/img/og-image.jpg">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css?v=8">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Roots of Hope and Wellness — home">
+      <img class="mark" src="assets/img/logo-mark.png" alt="" width="40" height="40">
+      <span>Roots of Hope <span class="sub">&amp; Wellness</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="booking.html">Book a consultation
+        <svg class="ico" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-panel" id="mobile-menu" aria-hidden="true">
+  <div class="wrap mp-head" style="padding:0">
+    <span class="brand"><span>Roots of Hope <span class="sub">&amp; Wellness</span></span></span>
+    <button class="nav-toggle" data-close aria-label="Close menu" aria-controls="mobile-menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <nav aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+  <a class="btn btn-primary" href="booking.html">Book a consultation</a>
+</div>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="glow" aria-hidden="true"></div>
+    <div class="wrap measure section-head aura">
+      <span class="ghost-word" aria-hidden="true">wisdom</span>
+      <span class="eyebrow center reveal">A wellness check-in</span>
+      <h1 class="h-display reveal reveal-d1">How are you <span class="em">feeling</span>?</h1>
+      <p class="lede reveal reveal-d2">Your body has wisdom. Together, let’s find the root.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:clamp(1rem,2vw,2rem)">
+    <div class="wrap">
+      <form class="intake" id="checkin-form">
+        <p class="muted center" style="max-width:640px;margin:0 auto clamp(1.6rem,4vw,2.6rem);background:var(--c-sage-tint);border-radius:var(--radius);padding:1rem 1.4rem;color:var(--c-sage-deep)">This form helps us understand how you are feeling so we can find the root causes and create a plan to help you heal and thrive.</p>
+
+        <div class="form-grid two" style="margin-bottom:1.4rem">
+          <div><label class="field-label" for="ci-name">Your name</label><input type="text" id="ci-name" name="name" autocomplete="name"></div>
+          <div><label class="field-label" for="ci-date">Date</label><input type="date" id="ci-date" name="date"></div>
+        </div>
+
+        <fieldset>
+          <legend><span class="n">1</span><span class="t">Your story</span></legend>
+          <label class="q-label" for="ci-best">When did you last feel your best?</label>
+          <textarea id="ci-best" name="last_best"></textarea>
+          <label class="q-label" for="ci-changed">What has changed since then?</label>
+          <textarea id="ci-changed" name="changed"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="n">2</span><span class="t">What symptoms are you experiencing?</span></legend>
+          <p class="sub">Check all that apply.</p>
+          <div class="checkgrid">
+      <label class="check"><input type="checkbox" name="sym_0"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Fatigue / Low Energy</span></label>
+      <label class="check"><input type="checkbox" name="sym_1"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Brain Fog / Poor Focus</span></label>
+      <label class="check"><input type="checkbox" name="sym_2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Anxiety / Overwhelm</span></label>
+      <label class="check"><input type="checkbox" name="sym_3"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Depression / Low Mood</span></label>
+      <label class="check"><input type="checkbox" name="sym_4"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Sleep Problems</span></label>
+      <label class="check"><input type="checkbox" name="sym_5"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Headaches / Migraines</span></label>
+      <label class="check"><input type="checkbox" name="sym_6"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Digestive Issues</span></label>
+      <label class="check"><input type="checkbox" name="sym_7"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Bloating / Gas</span></label>
+      <label class="check"><input type="checkbox" name="sym_8"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Constipation</span></label>
+      <label class="check"><input type="checkbox" name="sym_9"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Diarrhea</span></label>
+      <label class="check"><input type="checkbox" name="sym_10"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Nausea</span></label>
+      <label class="check"><input type="checkbox" name="sym_11"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Weight Gain</span></label>
+      <label class="check"><input type="checkbox" name="sym_12"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Difficulty Losing Weight</span></label>
+      <label class="check"><input type="checkbox" name="sym_13"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Sugar Cravings</span></label>
+      <label class="check"><input type="checkbox" name="sym_14"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Joint / Muscle Pain</span></label>
+      <label class="check"><input type="checkbox" name="sym_15"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Stiffness / Inflammation</span></label>
+      <label class="check"><input type="checkbox" name="sym_16"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Skin Issues</span></label>
+      <label class="check"><input type="checkbox" name="sym_17"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Thyroid Symptoms</span></label>
+      <label class="check"><input type="checkbox" name="sym_18"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Hormone Imbalance</span></label>
+      <label class="check"><input type="checkbox" name="sym_19"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Low Libido</span></label>
+      <label class="check"><input type="checkbox" name="sym_other"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Other:</span> <input type="text" class="other-in" name="sym_other_other" aria-label="Other"></label>
+</div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="n">3</span><span class="t">Today, how would you rate…</span></legend>
+          <div class="scale"><span class="sl">Energy</span><div class="scale-opts"><label class="rate"><input type="radio" name="energy" value="0"><span class="p">0</span></label><label class="rate"><input type="radio" name="energy" value="1"><span class="p">1</span></label><label class="rate"><input type="radio" name="energy" value="2"><span class="p">2</span></label><label class="rate"><input type="radio" name="energy" value="3"><span class="p">3</span></label><label class="rate"><input type="radio" name="energy" value="4"><span class="p">4</span></label><label class="rate"><input type="radio" name="energy" value="5"><span class="p">5</span></label><label class="rate"><input type="radio" name="energy" value="6"><span class="p">6</span></label><label class="rate"><input type="radio" name="energy" value="7"><span class="p">7</span></label><label class="rate"><input type="radio" name="energy" value="8"><span class="p">8</span></label><label class="rate"><input type="radio" name="energy" value="9"><span class="p">9</span></label><label class="rate"><input type="radio" name="energy" value="10"><span class="p">10</span></label></div><div class="ends"><span>Low</span><span>High</span></div></div><div class="scale"><span class="sl">Sleep Quality</span><div class="scale-opts"><label class="rate"><input type="radio" name="sleepq" value="0"><span class="p">0</span></label><label class="rate"><input type="radio" name="sleepq" value="1"><span class="p">1</span></label><label class="rate"><input type="radio" name="sleepq" value="2"><span class="p">2</span></label><label class="rate"><input type="radio" name="sleepq" value="3"><span class="p">3</span></label><label class="rate"><input type="radio" name="sleepq" value="4"><span class="p">4</span></label><label class="rate"><input type="radio" name="sleepq" value="5"><span class="p">5</span></label><label class="rate"><input type="radio" name="sleepq" value="6"><span class="p">6</span></label><label class="rate"><input type="radio" name="sleepq" value="7"><span class="p">7</span></label><label class="rate"><input type="radio" name="sleepq" value="8"><span class="p">8</span></label><label class="rate"><input type="radio" name="sleepq" value="9"><span class="p">9</span></label><label class="rate"><input type="radio" name="sleepq" value="10"><span class="p">10</span></label></div><div class="ends"><span>Poor</span><span>Great</span></div></div><div class="scale"><span class="sl">Stress Level</span><div class="scale-opts"><label class="rate"><input type="radio" name="stress" value="0"><span class="p">0</span></label><label class="rate"><input type="radio" name="stress" value="1"><span class="p">1</span></label><label class="rate"><input type="radio" name="stress" value="2"><span class="p">2</span></label><label class="rate"><input type="radio" name="stress" value="3"><span class="p">3</span></label><label class="rate"><input type="radio" name="stress" value="4"><span class="p">4</span></label><label class="rate"><input type="radio" name="stress" value="5"><span class="p">5</span></label><label class="rate"><input type="radio" name="stress" value="6"><span class="p">6</span></label><label class="rate"><input type="radio" name="stress" value="7"><span class="p">7</span></label><label class="rate"><input type="radio" name="stress" value="8"><span class="p">8</span></label><label class="rate"><input type="radio" name="stress" value="9"><span class="p">9</span></label><label class="rate"><input type="radio" name="stress" value="10"><span class="p">10</span></label></div><div class="ends"><span>Low</span><span>High</span></div></div><div class="scale"><span class="sl">Mood</span><div class="scale-opts"><label class="rate"><input type="radio" name="mood" value="0"><span class="p">0</span></label><label class="rate"><input type="radio" name="mood" value="1"><span class="p">1</span></label><label class="rate"><input type="radio" name="mood" value="2"><span class="p">2</span></label><label class="rate"><input type="radio" name="mood" value="3"><span class="p">3</span></label><label class="rate"><input type="radio" name="mood" value="4"><span class="p">4</span></label><label class="rate"><input type="radio" name="mood" value="5"><span class="p">5</span></label><label class="rate"><input type="radio" name="mood" value="6"><span class="p">6</span></label><label class="rate"><input type="radio" name="mood" value="7"><span class="p">7</span></label><label class="rate"><input type="radio" name="mood" value="8"><span class="p">8</span></label><label class="rate"><input type="radio" name="mood" value="9"><span class="p">9</span></label><label class="rate"><input type="radio" name="mood" value="10"><span class="p">10</span></label></div><div class="ends"><span>Low</span><span>High</span></div></div><div class="scale"><span class="sl">Overall Well-being</span><div class="scale-opts"><label class="rate"><input type="radio" name="wellbeing" value="0"><span class="p">0</span></label><label class="rate"><input type="radio" name="wellbeing" value="1"><span class="p">1</span></label><label class="rate"><input type="radio" name="wellbeing" value="2"><span class="p">2</span></label><label class="rate"><input type="radio" name="wellbeing" value="3"><span class="p">3</span></label><label class="rate"><input type="radio" name="wellbeing" value="4"><span class="p">4</span></label><label class="rate"><input type="radio" name="wellbeing" value="5"><span class="p">5</span></label><label class="rate"><input type="radio" name="wellbeing" value="6"><span class="p">6</span></label><label class="rate"><input type="radio" name="wellbeing" value="7"><span class="p">7</span></label><label class="rate"><input type="radio" name="wellbeing" value="8"><span class="p">8</span></label><label class="rate"><input type="radio" name="wellbeing" value="9"><span class="p">9</span></label><label class="rate"><input type="radio" name="wellbeing" value="10"><span class="p">10</span></label></div><div class="ends"><span>Poor</span><span>Great</span></div></div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="n">4</span><span class="t">Lifestyle check-in</span></legend>
+          <p class="sub">How would you rate the following? (1 = Poor, 5 = Great)</p>
+          <div class="life-grid">
+<div class="life-item"><div class="lh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8c2.5-3 6-3 7 0 1 3-1 9-4 11-1 .6-2 .6-3 0-3-2-5-8-4-11 1-3 4.5-3 4 0Z"/><path d="M12 8V4M12 4c1-1.5 2.5-1.5 3.5-1"/></svg><div><b>Nutrition</b> <span>(Eating well)</span></div></div><div class="scale-opts"><label class="rate"><input type="radio" name="ls_nutrition" value="1"><span class="p">1</span></label><label class="rate"><input type="radio" name="ls_nutrition" value="2"><span class="p">2</span></label><label class="rate"><input type="radio" name="ls_nutrition" value="3"><span class="p">3</span></label><label class="rate"><input type="radio" name="ls_nutrition" value="4"><span class="p">4</span></label><label class="rate"><input type="radio" name="ls_nutrition" value="5"><span class="p">5</span></label></div><div class="ends" style="max-width:14rem"><span>Poor</span><span>Great</span></div></div>
+<div class="life-item"><div class="lh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17h5l3-3 3 5h5"/><circle cx="14" cy="5" r="2"/><path d="M9 12l3-2 3 2 1 3"/></svg><div><b>Movement</b> <span>(Physical activity)</span></div></div><div class="scale-opts"><label class="rate"><input type="radio" name="ls_movement" value="1"><span class="p">1</span></label><label class="rate"><input type="radio" name="ls_movement" value="2"><span class="p">2</span></label><label class="rate"><input type="radio" name="ls_movement" value="3"><span class="p">3</span></label><label class="rate"><input type="radio" name="ls_movement" value="4"><span class="p">4</span></label><label class="rate"><input type="radio" name="ls_movement" value="5"><span class="p">5</span></label></div><div class="ends" style="max-width:14rem"><span>Poor</span><span>Great</span></div></div>
+<div class="life-item"><div class="lh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 15A8 8 0 0 1 9 4a7 7 0 1 0 8 11Z"/></svg><div><b>Sleep</b> <span>(Quantity / Quality)</span></div></div><div class="scale-opts"><label class="rate"><input type="radio" name="ls_sleep" value="1"><span class="p">1</span></label><label class="rate"><input type="radio" name="ls_sleep" value="2"><span class="p">2</span></label><label class="rate"><input type="radio" name="ls_sleep" value="3"><span class="p">3</span></label><label class="rate"><input type="radio" name="ls_sleep" value="4"><span class="p">4</span></label><label class="rate"><input type="radio" name="ls_sleep" value="5"><span class="p">5</span></label></div><div class="ends" style="max-width:14rem"><span>Poor</span><span>Great</span></div></div>
+<div class="life-item"><div class="lh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4c2 3 2 6 0 8-2-2-2-5 0-8Z"/><path d="M12 12c-3-1-6 .5-7.5 3 2.5 1.3 5.5 1 7.5-.6"/><path d="M12 12c3-1 6 .5 7.5 3-2.5 1.3-5.5 1-7.5-.6"/><path d="M12 12v8"/></svg><div><b>Stress Management</b> </div></div><div class="scale-opts"><label class="rate"><input type="radio" name="ls_stress" value="1"><span class="p">1</span></label><label class="rate"><input type="radio" name="ls_stress" value="2"><span class="p">2</span></label><label class="rate"><input type="radio" name="ls_stress" value="3"><span class="p">3</span></label><label class="rate"><input type="radio" name="ls_stress" value="4"><span class="p">4</span></label><label class="rate"><input type="radio" name="ls_stress" value="5"><span class="p">5</span></label></div><div class="ends" style="max-width:14rem"><span>Poor</span><span>Great</span></div></div>
+<div class="life-item"><div class="lh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/></svg><div><b>Hydration</b> <span>(Drinking water)</span></div></div><div class="scale-opts"><label class="rate"><input type="radio" name="ls_hydration" value="1"><span class="p">1</span></label><label class="rate"><input type="radio" name="ls_hydration" value="2"><span class="p">2</span></label><label class="rate"><input type="radio" name="ls_hydration" value="3"><span class="p">3</span></label><label class="rate"><input type="radio" name="ls_hydration" value="4"><span class="p">4</span></label><label class="rate"><input type="radio" name="ls_hydration" value="5"><span class="p">5</span></label></div><div class="ends" style="max-width:14rem"><span>Poor</span><span>Great</span></div></div>
+<div class="life-item"><div class="lh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.5 5.5l1.5 1.5M17 17l1.5 1.5M18.5 5.5 17 7M7 17l-1.5 1.5"/></svg><div><b>Sunlight / Time Outdoors</b> </div></div><div class="scale-opts"><label class="rate"><input type="radio" name="ls_sunlight" value="1"><span class="p">1</span></label><label class="rate"><input type="radio" name="ls_sunlight" value="2"><span class="p">2</span></label><label class="rate"><input type="radio" name="ls_sunlight" value="3"><span class="p">3</span></label><label class="rate"><input type="radio" name="ls_sunlight" value="4"><span class="p">4</span></label><label class="rate"><input type="radio" name="ls_sunlight" value="5"><span class="p">5</span></label></div><div class="ends" style="max-width:14rem"><span>Poor</span><span>Great</span></div></div>
+<div class="life-item"><div class="lh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="9" r="2.5"/><circle cx="16" cy="9" r="2.5"/><path d="M4 19c0-2.5 2-4 4-4s4 1.5 4 4M12 19c0-2.5 2-4 4-4s4 1.5 4 4"/></svg><div><b>Relationships & Connection</b> </div></div><div class="scale-opts"><label class="rate"><input type="radio" name="ls_relationships" value="1"><span class="p">1</span></label><label class="rate"><input type="radio" name="ls_relationships" value="2"><span class="p">2</span></label><label class="rate"><input type="radio" name="ls_relationships" value="3"><span class="p">3</span></label><label class="rate"><input type="radio" name="ls_relationships" value="4"><span class="p">4</span></label><label class="rate"><input type="radio" name="ls_relationships" value="5"><span class="p">5</span></label></div><div class="ends" style="max-width:14rem"><span>Poor</span><span>Great</span></div></div>
+</div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="n">5</span><span class="t">What stresses are impacting you?</span></legend>
+          <p class="sub">Check all that apply.</p>
+          <div class="checkgrid">
+      <label class="check"><input type="checkbox" name="str_0"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Work / School</span></label>
+      <label class="check"><input type="checkbox" name="str_1"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Financial</span></label>
+      <label class="check"><input type="checkbox" name="str_2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Relationships</span></label>
+      <label class="check"><input type="checkbox" name="str_3"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Family Responsibilities</span></label>
+      <label class="check"><input type="checkbox" name="str_4"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Health Concerns</span></label>
+      <label class="check"><input type="checkbox" name="str_5"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Emotional / Mental</span></label>
+      <label class="check"><input type="checkbox" name="str_6"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Past Trauma</span></label>
+      <label class="check"><input type="checkbox" name="str_7"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Toxins / Environment</span></label>
+      <label class="check"><input type="checkbox" name="str_other"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Other:</span> <input type="text" class="other-in" name="str_other_other" aria-label="Other"></label>
+</div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="n">6</span><span class="t">What supports you?</span></legend>
+          <p class="sub">Check all that apply.</p>
+          <div class="checkgrid">
+      <label class="check"><input type="checkbox" name="sup_0"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Faith / Spirituality</span></label>
+      <label class="check"><input type="checkbox" name="sup_1"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Prayer / Meditation</span></label>
+      <label class="check"><input type="checkbox" name="sup_2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Nature</span></label>
+      <label class="check"><input type="checkbox" name="sup_3"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Exercise / Movement</span></label>
+      <label class="check"><input type="checkbox" name="sup_4"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Creative Outlets</span></label>
+      <label class="check"><input type="checkbox" name="sup_5"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Reading / Learning</span></label>
+      <label class="check"><input type="checkbox" name="sup_6"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Community / Friends</span></label>
+      <label class="check"><input type="checkbox" name="sup_7"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Essential Oils / Self Care</span></label>
+      <label class="check"><input type="checkbox" name="sup_other"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Other:</span> <input type="text" class="other-in" name="sup_other_other" aria-label="Other"></label>
+</div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="n">7</span><span class="t">What are your top health goals?</span></legend>
+          <p class="sub">List up to three.</p>
+          <div class="lines">
+            <input type="text" name="goal_1" aria-label="Goal 1" placeholder="1.">
+            <input type="text" name="goal_2" aria-label="Goal 2" placeholder="2.">
+            <input type="text" name="goal_3" aria-label="Goal 3" placeholder="3.">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="n">8</span><span class="t">What would success look like for you?</span></legend>
+          <p class="sub">How will you feel? What will you be able to do?</p>
+          <textarea name="success" style="min-height:5rem"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="n">9</span><span class="t">Is there anything else you want us to know?</span></legend>
+          <p class="sub">Share anything important about your health history, medications, or concerns.</p>
+          <textarea name="anything_else" style="min-height:6rem"></textarea>
+        </fieldset>
+
+        <div class="intake-actions">
+          <button type="button" class="btn btn-primary" id="ci-print">Print / save my check-in
+            <svg class="ico" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M6 14h12v7H6z"/></svg>
+          </button>
+          <a class="btn btn-ghost" href="booking.html">Book a consultation</a>
+        </div>
+        <p class="muted center" style="margin-top:1.2rem;font-size:.86rem;max-width:560px;margin-inline:auto">You are more than your symptoms. Fill this out, then print or save it to bring to your visit. Your full, secure intake is handled privately in Elyse’s <a class="link-arrow" style="display:inline" href="https://elyse-fearon4439.clientsecure.me/" target="_blank" rel="noopener">SimplePractice portal</a>.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="section bg-photo" style="background-image:url('assets/img/nature-2.jpg');padding-block:clamp(3rem,6vw,5rem)">
+    <div class="wrap center measure">
+      <p class="scripture reveal" style="display:inline-block;font-size:1.15rem">“Your body. Your story. Your healing. We’re in this together.”</p>
+    </div>
+  </section>
+</main>
+
+<div class="mobile-cta">
+  <a class="btn btn-primary" href="booking.html">Book a consultation
+    <svg class="ico" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><span>Roots of Hope <span class="sub">&amp; Wellness</span></span></a>
+        <p>Where faith meets functional medicine. Helping you uncover the root causes of your symptoms and find your light again.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Elyse</a>
+        <a href="services.html">Services &amp; pricing</a>
+        <a href="blog.html">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get started</h4>
+        <a href="booking.html">Book a consultation</a>
+        <a href="check-in.html">Wellness check-in</a>
+        <a href="mailto:RHW@rootsofhopeandwellness.com">RHW@rootsofhopeandwellness.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Roots of Hope &amp; Wellness. All rights reserved.</span>
+      <span class="verse">“Rooted and built up in Him.” — Colossians 2:7</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js?v=2" defer></script>
+<script>document.getElementById('ci-print').addEventListener('click',function(){window.print();});</script>
+</body>
+</html>
