@@ -378,8 +378,8 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--c
 .reveal-d3 { transition-delay: .24s; }
 
 /* ------------------------- mobile nav panel --------------------- */
-.mobile-panel { position: fixed; inset: 0; z-index: 60; background: var(--c-bone); transform: translateY(-100%); transition: transform .5s var(--ease); display: flex; flex-direction: column; padding: 1.4rem var(--gutter) 2rem; }
-.mobile-panel.open { transform: none; }
+.mobile-panel { position: fixed; inset: 0; z-index: 60; background: var(--c-bone); transform: translateY(-100%); visibility: hidden; transition: transform .5s var(--ease), visibility 0s linear .5s; display: flex; flex-direction: column; padding: 1.4rem var(--gutter) 2rem; }
+.mobile-panel.open { transform: none; visibility: visible; transition: transform .5s var(--ease), visibility 0s; }
 .mobile-panel .mp-head { display: flex; align-items: center; justify-content: space-between; height: 78px; }
 .mobile-panel nav { display: grid; gap: .3rem; margin-top: 2rem; }
 .mobile-panel nav a { font-family: var(--font-display); font-size: 2rem; padding-block: .5rem; border-bottom: 1px solid var(--c-line); }

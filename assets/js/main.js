@@ -18,8 +18,8 @@
   var panel = document.querySelector('.mobile-panel');
   if (toggle && panel) {
     var close = panel.querySelector('[data-close]');
-    var open = function () { panel.classList.add('open'); document.body.style.overflow = 'hidden'; toggle.setAttribute('aria-expanded', 'true'); };
-    var shut = function () { panel.classList.remove('open'); document.body.style.overflow = ''; toggle.setAttribute('aria-expanded', 'false'); };
+    var open = function () { panel.removeAttribute('inert'); panel.classList.add('open'); document.body.style.overflow = 'hidden'; toggle.setAttribute('aria-expanded', 'true'); };
+    var shut = function () { panel.classList.remove('open'); panel.setAttribute('inert', ''); document.body.style.overflow = ''; toggle.setAttribute('aria-expanded', 'false'); };
     toggle.addEventListener('click', open);
     if (close) close.addEventListener('click', shut);
     panel.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', shut); });
