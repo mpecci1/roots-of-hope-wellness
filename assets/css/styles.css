@@ -44,7 +44,7 @@ body {
   font-family: var(--font-body);
   background: var(--c-bone);
   color: var(--c-soil);
-  font-size: clamp(1rem, .96rem + .2vw, 1.0625rem);
+  font-size: clamp(1.0625rem, 1rem + .3vw, 1.125rem);
   line-height: 1.7;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -95,6 +95,8 @@ h3 { font-size: clamp(1.35rem, 1.15rem + .9vw, 1.7rem); }
   background: var(--c-clay);
   opacity: .55;
 }
+/* one eyebrow-to-heading gap everywhere, instead of 21 inline margins */
+.eyebrow + h1, .eyebrow + h2, .eyebrow + h3 { margin-top: 1rem; }
 .eyebrow.center::after {
   content: ""; width: 1.8em; height: 1px; background: var(--c-clay); opacity: .55;
 }
@@ -197,6 +199,7 @@ h3 { font-size: clamp(1.35rem, 1.15rem + .9vw, 1.7rem); }
 .hero-copy { max-width: 33ch; }
 .hero h1 { margin-block: .9rem 1.6rem; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2.2rem; }
+.cta-note { margin-top: .9rem; font-size: .84rem; color: var(--c-soil-soft); letter-spacing: .01em; }
 /* hero credential pills: tidy 2×2 grid, sized to content so each pill stays on
    one line (it extends into the empty space to the right of the hero copy) */
 .hero .creds { display: grid; grid-template-columns: auto auto; width: max-content; max-width: none; justify-content: start; gap: .65rem; }
@@ -374,6 +377,7 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--c
 .footer-col a { display: block; color: #C9C1B3; padding-block: .6rem; transition: color .25s; }
 .footer-col a:hover { color: #fff; }
 .footer-bottom { margin-top: 2.2rem; padding-top: 1.4rem; border-top: 1px solid rgba(255,255,255,.1); display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; font-size: .82rem; color: #A39A8B; }
+.footer-bottom .safety { flex-basis: 100%; color: rgba(255,255,255,.62); font-size: .78rem; line-height: 1.5; }
 
 /* --------------------------- reveal anim ------------------------ */
 .reveal { transition: opacity .9s var(--ease), transform .9s var(--ease); }
