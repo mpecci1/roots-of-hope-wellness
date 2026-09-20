@@ -1,6 +1,6 @@
 # Roots of Hope & Wellness
 
-Marketing website for **Roots of Hope & Wellness** — Elyse Fearon's
+Marketing website for **Roots of Hope & Wellness**, Elyse Fearon's
 metabolic-health practice. *Rooted in science and guided by hope.*
 
 A hand-built **static site** (HTML / CSS / vanilla JS, no build step).
@@ -30,7 +30,7 @@ python3 -m http.server 8753
 
 ## Deploy
 
-Static site — no build step. On Cloudflare Pages: **Build command:** _(none)_ ·
+Static site, no build step. On Cloudflare Pages: **Build command:** _(none)_ ·
 **Build output directory:** `/`
 
 ## Integrations
