@@ -1,6 +1,6 @@
 # Roots of Hope & Wellness
 
-Marketing website for **Roots of Hope & Wellness** — Elyse Fearon's faith-based
+Marketing website for **Roots of Hope & Wellness** — Elyse Fearon's
 metabolic-health practice. *Rooted in science and guided by hope.*
 
 A hand-built **static site** (HTML / CSS / vanilla JS, no build step).
