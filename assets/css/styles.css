@@ -82,7 +82,11 @@ h3 { font-size: clamp(1.35rem, 1.15rem + .9vw, 1.7rem); }
   display: inline-flex;
   align-items: center;
   gap: .6em;
+  text-wrap: balance; /* two even lines when it must wrap — never a one-word orphan */
 }
+/* the hero slogan runs past the 36ch copy column into the empty space beside it
+   (same trick as the cred pills) so it reads as one line on desktop */
+@media (min-width: 921px) { .hero .eyebrow { white-space: nowrap; } }
 .eyebrow::before {
   content: "";
   width: 1.8em; height: 1px;
@@ -220,7 +224,7 @@ h3 { font-size: clamp(1.35rem, 1.15rem + .9vw, 1.7rem); }
 }
 .arch-badge .seal { width: 40px; height: 40px; flex: none; color: var(--c-sage); }
 .arch-badge b { font-family: var(--font-display); font-size: 1.45rem; line-height: 1; display: block; }
-.arch-badge span { font-size: .74rem; line-height: 1.25; color: var(--c-soil-soft); }
+.arch-badge span { display: block; font-size: .74rem; line-height: 1.25; color: var(--c-soil-soft); text-wrap: balance; }
 
 /* --------------------------- value row -------------------------- */
 .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.5rem, 3vw, 2.6rem); }
