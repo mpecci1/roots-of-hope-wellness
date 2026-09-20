@@ -272,6 +272,9 @@ h3 { font-size: clamp(1.35rem, 1.15rem + .9vw, 1.7rem); }
 
 /* pricing */
 .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 1.4rem; align-items: stretch; }
+/* four-step pricing ladder: 4-up on wide screens, 2×2 on tablets, stacked on phones */
+.tiers.four { grid-template-columns: repeat(2, 1fr); max-width: 940px; margin-inline: auto; }
+@media (max-width: 600px) { .tiers.four { grid-template-columns: 1fr; } }
 .tier {
   background: var(--c-bone-2); border: 1px solid var(--c-line); border-radius: var(--radius-lg);
   padding: 2.2rem; display: flex; flex-direction: column;
@@ -287,7 +290,7 @@ h3 { font-size: clamp(1.35rem, 1.15rem + .9vw, 1.7rem); }
 .price { margin-block: .6rem 1.2rem; display: flex; align-items: baseline; gap: .4rem; }
 .price b { font-family: var(--font-display); font-size: 2.6rem; font-weight: 400; line-height: 1; }
 .price .per { color: var(--c-soil-soft); font-size: .9rem; }
-.tier-feat { display: grid; gap: .7rem; margin-block: 1rem 1.8rem; flex: 1; }
+.tier-feat { display: grid; gap: .7rem; margin-block: 1rem 1.8rem; flex: 1; align-content: start; }
 .tier-feat li { display: grid; grid-template-columns: auto 1fr; gap: .65rem; font-size: .95rem; align-items: start; }
 .tier-feat svg { width: 18px; height: 18px; color: var(--c-sage); margin-top: .28rem; }
 .tier.featured .tier-feat svg { color: var(--c-gold-soft); }
