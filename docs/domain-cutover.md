@@ -72,8 +72,34 @@ Cloudflare creates the DNS records and issues the certificate itself.
   Do this the same day, not a week later.
 - The old workers.dev address still works, which is fine.
 
+
+## Decided: www is the canonical hostname, not the bare domain
+
+Checked live. Everything Google has indexed is on `www`, the bare domain
+already 301s to `www`, and the old site's own canonical tag says `www`. So
+keep `www` and point the bare domain at it. That means one extra step after
+the custom domains are added:
+
+Cloudflare, Rules, Redirect Rules, Create rule:
+hostname equals `rootsofhopeandwellness.com`, then "Dynamic redirect" to
+`concat("https://www.rootsofhopeandwellness.com", http.request.uri.path)`,
+status 301, preserve query string. Without this both hostnames serve the same
+pages and Google treats them as duplicates.
+
+## Already done in the code
+
+- **Old URLs are redirected.** Five of the seven URLs in the old Squarespace
+  sitemap would have 404'd: `/home`, `/appointments` and all three blog posts,
+  two of them with opaque Squarespace slugs. A `_redirects` file 301s each to
+  its new page. Tested live on the workers.dev hostname, all five pass.
+- **The canonical swap is staged** at `tools/go-live.sh`. Run it the day the
+  domain goes live: `bash tools/go-live.sh --apply`, then commit and push. It
+  rewrites all 78 workers.dev references across the pages, the sitemap and
+  robots.txt, and verifies the structured data still parses.
+
 ## Step 5. Afterwards
 
-- Update the canonical URLs, sitemap.xml, robots.txt and the JSON-LD in the
-  site, which all still say workers.dev. That is a code change, one commit.
+- Run `bash tools/go-live.sh --apply`, commit, push.
+- Resubmit the sitemap in Google Search Console, and add the new domain as a
+  property there if it is not already.
 - Leave Squarespace paid up for a couple of weeks as a fallback, then cancel.
