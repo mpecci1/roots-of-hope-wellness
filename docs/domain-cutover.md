@@ -103,3 +103,24 @@ pages and Google treats them as duplicates.
 - Resubmit the sitemap in Google Search Console, and add the new domain as a
   property there if it is not already.
 - Leave Squarespace paid up for a couple of weeks as a fallback, then cancel.
+
+## Copy-paste: the root-to-www redirect rule
+
+Cloudflare, Rules, Redirect Rules, Create rule. Name it "root to www".
+
+**When incoming requests match**, use the expression editor and paste:
+
+```
+(http.host eq "rootsofhopeandwellness.com")
+```
+
+**Then**, choose Dynamic redirect, and paste as the expression:
+
+```
+concat("https://www.rootsofhopeandwellness.com", http.request.uri.path)
+```
+
+Status code 301. Turn ON "Preserve query string". Deploy.
+
+Without this, both hostnames serve the same pages and Google treats it as two
+copies of the site.
